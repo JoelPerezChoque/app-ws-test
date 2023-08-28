@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "5f43809e-b9cf-468b-bb0b-65843f2fa698",
+		"name": "TEST-2023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18031702"
+	},
+	"item": [
+		{
+			"name": "empresa/create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Example2023Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":0,\r\n    \"ruc\": \"20000000006\",\r\n    \"razonSocial\": \"CLIENTE DE PRUEBA\",\r\n    \"direccion\": \"LOS ANDENES\",\r\n    \"estado\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/app-ws-test/empresa/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"app-ws-test",
+						"empresa",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empresa/topthree",
+			"protocolProfileBehavior": {
+				"disableUrlEncoding": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Example2023Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/app-ws-test/empresa/topthree",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"app-ws-test",
+						"empresa",
+						"topthree"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
